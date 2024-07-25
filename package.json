@@ -1,7 +1,7 @@
 {
   "name": "quicksqlserversnippets",
   "displayName": "QuickSqlServerSnippets",
-  "description": "create sql queries that you can quickly access with the click of a button",
+  "description": "Quick SQL Server Snippets is a Visual Studio Code extension that simplifies the process of managing and executing SQL queries on SQL Server databases directly from the editor.",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.91.0"
@@ -14,8 +14,16 @@
   "contributes": {
     "commands": [
       {
-        "command": "quicksqlserversnippets.helloWorld",
-        "title": "Hello World"
+        "command": "quicksqlserversnippets.QuickShowForm",
+        "title": "QSSS: Quick Show Form"
+      },
+      {
+        "command": "quicksqlserversnippets.QuickRunSavedQuery",
+        "title": "QSSS: Quick Run Saved Query"
+      },
+      {
+        "command": "quicksqlserversnippets.QuickDeleteSavedQuery",
+        "title": "QSSS: Quick Delete Saved Query"
       }
     ]
   },
@@ -28,14 +36,19 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.91.0",
     "@types/mocha": "^10.0.7",
+    "@types/mssql": "^9.1.5",
     "@types/node": "20.x",
+    "@types/vscode": "^1.91.0",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.11.0",
-    "eslint": "^8.57.0",
-    "typescript": "^5.4.5",
     "@vscode/test-cli": "^0.0.9",
-    "@vscode/test-electron": "^2.4.0"
+    "@vscode/test-electron": "^2.4.0",
+    "eslint": "^8.57.0",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "msnodesqlv8": "^4.2.1",
+    "mssql": "^11.0.1"
   }
 }
