@@ -3,6 +3,8 @@
   "displayName": "QuickSqlServerSnippets",
   "description": "Quick SQL Server Snippets is a Visual Studio Code extension that simplifies the process of managing and executing SQL queries on SQL Server databases directly from the editor.",
   "version": "0.0.1",
+  "publisher": "AnoopVK",
+  "repository": "https://github.com/anoopvk/QuickSqlServerSnippets",
   "engines": {
     "vscode": "^1.91.0"
   },
@@ -36,15 +38,20 @@
     "test": "vscode-test"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.16",
     "@types/mocha": "^10.0.7",
     "@types/mssql": "^9.1.5",
     "@types/node": "20.x",
+    "@types/sinon": "^17.0.3",
     "@types/vscode": "^1.91.0",
     "@typescript-eslint/eslint-plugin": "^7.14.1",
     "@typescript-eslint/parser": "^7.11.0",
     "@vscode/test-cli": "^0.0.9",
     "@vscode/test-electron": "^2.4.0",
+    "chai": "^5.1.1",
     "eslint": "^8.57.0",
+    "mocha": "^10.7.0",
+    "sinon": "^18.0.0",
     "typescript": "^5.4.5"
   },
   "dependencies": {

@@ -1,71 +1,79 @@
-# quicksqlserversnippets README
+# QuickSqlServerSnippets
 
-This is the README for your extension "quicksqlserversnippets". After writing up a brief description, we recommend including the following sections.
+**QuickSqlServerSnippets** is a Visual Studio Code extension that simplifies the process of managing and executing SQL queries on SQL Server databases directly from the editor.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- **Quick Show Form:** Prompt the user to enter a SQL Server connection string, SQL query, and a name for the SQL command. Save these details for later use.
+- **Quick Run Saved Query:** Run a previously saved SQL query and display the results in a new editor window.
+- **Quick Delete Saved Query:** Delete a previously saved SQL query.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+<!-- - Visual Studio Code version 1.91.0 or higher.
+- Node.js and npm installed. -->
+- SQL Server instance accessible with valid credentials.
 
-## Extension Settings
+## Installation
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+1. Install the extension from the VSCode Marketplace.
+2. Reload or restart Visual Studio Code.
 
-For example:
+## Usage
 
-This extension contributes the following settings:
+### 1. Quick Show Form
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+1. Open the Command Palette (Ctrl+Shift+P).
+2. Type `QSSS: Quick Show Form` and press Enter.
+3. Enter the SQL Server connection string, SQL query, and a name for the SQL command when prompted.
+4. The query will be saved for later use.
 
-## Known Issues
+### 2. Quick Run Saved Query
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+1. Open the Command Palette (Ctrl+Shift+P).
+2. Type `QSSS: Quick Run Saved Query` and press Enter.
+3. Select a saved SQL command from the list.
+4. The query will be executed, and the results will be displayed in a new editor window.
 
-## Release Notes
+### 3. Quick Delete Saved Query
 
-Users appreciate release notes as you update your extension.
+1. Open the Command Palette (Ctrl+Shift+P).
+2. Type `QSSS: Quick Delete Saved Query` and press Enter.
+3. Select a saved SQL command from the list.
+4. Confirm the deletion. The selected query will be deleted.
 
-### 1.0.0
+## Notes
 
-Initial release of ...
+- **Windows Authentication:** This extension does not support Windows Authentication at the moment (Under development). Please use SQL Server Authentication.
+- **TCP Connection:** If you encounter issues, try enabling TCP connections in SQL Server Configuration Manager.
 
-### 1.0.1
+## Contributing
 
-Fixed issue #.
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Open a pull request.
 
-### 1.1.0
+## Issues
 
-Added features X, Y, and Z.
+If you encounter any issues or have suggestions for improvements, please open an issue on the GitHub repository.
+
+## License
+
+This extension is licensed under the MIT License.
+
+## Acknowledgements
+
+This extension uses the following libraries:
+- [mssql](https://www.npmjs.com/package/mssql)
+- [msnodesqlv8](https://www.npmjs.com/package/msnodesqlv8)
 
 ---
+## Development
 
-## Following extension guidelines
+To set up a development environment:
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Use `npm run watch` to start the TypeScript compiler in watch mode.
+4. Press `F5` to start debugging the extension.
